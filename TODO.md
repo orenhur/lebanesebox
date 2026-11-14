@@ -15,3 +15,26 @@
 - Configure a real EMAIL mailbox in config.js; the reserved .example address cannot receive mail.
 - Supply social links, a regional advisor to review context copy, and verified context facts and primary sources supplied by the project owner. context.js deliberately contains no facts, statistics, dates, blame or named parties.
 - Add 3-4 owner-supplied context facts with sourceName, sourceUrl, asOf and text. Do not fill gaps from memory. Confirm the regional context with a qualified advisor.
+- Confirm the support response time before adding a reply-within promise to the first-box guarantee. No response-time value is currently configured.
+
+## Founder note
+
+- Supply [FOUNDER NAME] and [ONE TRUE DETAIL ABOUT WHY LEBANON] in founderNote.name and founderNote.detail in config.js. Use an approved first-person statement. The note remains hidden until both real values are supplied. No founder identity or motive has been invented.
+
+## Situation content
+
+- Gather verified facts with primary sources and as-of dates before filling situation.js.
+- Obtain licensed or permissioned photos with credits and captions; check consent for identifiable people and mark sensitive images explicitly.
+- Have a Lebanese reviewer approve the copy and get legal review for statements about how purchases help.
+- Add reviewer and lastReviewed values. Set enabled:true only after these checks are complete.
+- Only fully sourced sections render. How-it-helps statements must live verbatim in sourced items; free-standing prose cannot add an unsourced impact claim or number.
+
+## Advisor consent checklist
+
+- Obtain written permission for each person's name, photo, title, organization, bio and links.
+- Confirm the exact title and organization wording they want shown, and confirm removal on request.
+- Keep written consent records outside this repository; publish only the approved consent metadata.
+- Check whether the person's employer requires approval for an outside role. Do not list government officials or employees of UN agencies, NGOs, banks, news outlets or other organizations without confirming they are permitted to participate.
+- For Lebanon and other sensitive regions, confirm comfort with being publicly named and consider displayMode:limited. Browser data files are public: omit any information that is not approved for publication even when the UI hides it.
+- Set visible:false and redeploy to remove an advisor immediately. Re-run node scripts/update-sitemap.cjs after changing advisor data and before deployment. The static sitemap cannot evaluate browser-side JavaScript.
+- Set ADVISORS_SETTINGS.enabled:true only after at least one approved advisor has complete consent and biography fields.

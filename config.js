@@ -8,6 +8,8 @@ window.SITE_CONFIG = Object.freeze({
  OFFER_TEXT: '20% off your first box',
  SHIPS_TO: ['United States','Canada','United Kingdom','Australia'],
  EMAIL: 'hello@minelalb.example',
+ // [FOUNDER NAME] and [ONE TRUE DETAIL ABOUT WHY LEBANON]: supply real values before the note renders.
+ founderNote: { name: '', detail: '' },
  // TODO: supply Stripe-hosted TEST payment links; never use live links or private keys here.
  STRIPE_TEST_LINKS: { monthly: '', once: '' }
 });
