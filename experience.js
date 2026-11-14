@@ -30,7 +30,7 @@
 // Keep native MODE destinations while giving the closing collection CTA its editorial label.
 if(document.body.dataset.experience==='lebanon'&&SITE_CONFIG.MODE!=='live'){
  const closing=document.querySelector('.closing-section .collection-buy');
- if(closing)closing.textContent='Join the journey';
+ if(closing)closing.textContent='Join the Waitlist';
 }
 const experienceMenu=document.querySelector('[data-experience] .menu-toggle');
 experienceMenu?.addEventListener('click',()=>{if(experienceMenu.getAttribute('aria-expanded')==='true')document.querySelector('#navigation a')?.focus();});

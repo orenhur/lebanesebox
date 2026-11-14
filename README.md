@@ -68,3 +68,7 @@ See [REDESIGN.md](REDESIGN.md) for the shared theme primitives, static showcase 
 ## Lebanon box-item carousel
 
 The Lebanon product-type section now uses the supplied orbit animation as an isolated static-deploy widget. To rebuild: `cd widgets/box-carousel`, `npm install`, then `npm run build`. Commit the generated assets/js/box-carousel.js and Lebanon HTML fallback with source/data changes. Netlify continues to serve the repository root without a build step. See [widgets/box-carousel/README.md](widgets/box-carousel/README.md), including the required rebuild after changing BOX_ITEMS_MODE or box-items.js for JavaScript-disabled visitors.
+
+## Brand messaging
+
+Lead with helping entrepreneurs and small businesses in conflict-affected countries reach international customers, beginning with Lebanon. Products, craftsmanship and cultural experience support that mission rather than replace it. Keep the early-stage language, concept-product disclosures and waitlist's lack of financial commitment clear. Do not claim confirmed suppliers, inventory, guaranteed growth or measured impact without verified business information.

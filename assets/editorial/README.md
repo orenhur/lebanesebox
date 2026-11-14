@@ -9,3 +9,5 @@ These scenes were generated specifically for this redesign with OpenAI image gen
 The original generated PNGs remain in the workspace's generated_images directory. Deployed WebP derivatives have widths 480, 800, 1200 and 1536 pixels, retaining the full 3:2 composition. Visible captions disclose that products and makers are not confirmed. Replace these assets with licensed, approved photography when sourcing is confirmed; review captions and alt text at the same time.
 
 `share-preview.jpg` is a solid ivory social image containing the untouched official logo. Set absolute Open Graph/Twitter image URLs when the final public domain is confirmed.
+
+`global-collection-672.webp` is an additional phone-sized delivery derivative of the same original global concept scene, at the same WebP quality setting. It preserves the full 3:2 composition; no new photograph or arrangement was introduced, and the original assets remain unchanged.

@@ -47,4 +47,4 @@ The component's own commercial-use license still requires confirmation before la
 
 See the box-carousel follow-up in `/QA.md`. Real-item fixtures were injected only by local browser tests and were never saved into the production data. File-size totals are measured from the generated JS, not an estimate; no source map is shipped.
 
-Final production artifact: **231,985 bytes minified**, **79,613 bytes gzip** (approximately 232 kB / 79.6 kB). The separate shared data file and self-hosted font files are not part of that JS byte count.
+Final production artifact: **231,985 bytes minified**, **79,614 bytes gzip** (approximately 232 kB / 79.6 kB). The separate shared data file and self-hosted font files are not part of that JS byte count.

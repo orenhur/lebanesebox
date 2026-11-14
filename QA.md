@@ -50,3 +50,18 @@ The supplied orbit animation is now integrated only into the Lebanon box-item se
 - TypeScript checking, Vite production build, browser runtime checks and git diff --check passed. Rebuilding after config/data changes refreshes the HTML fallback needed by JavaScript-disabled visitors.
 
 - Final widget artifact: 231,985 bytes minified; 79,613 bytes gzip. An actual emulated mobile touch gesture also advanced the item and produced the requested live announcement.
+
+## Mission-first messaging update
+
+Updated the homepage, Lebanon hero/story/product/waitlist messaging, five mission/status FAQs, footer descriptions, supporting-page introductions, CTA labels and metadata. The product carousel, illustration data, images, official logo, CSS, forms and underlying MODE gates are retained. The existing story and carousel sections carry the requested Every Box Holds a Story and Made to Taste/Made to Keep headings; no sections or pages were added.
+
+- Main routes checked at 360, 768, 1280 and 1600px in light and dark: no clipped or overlapping text or horizontal scrolling. Representative screenshots reviewed.
+- Supporting pages checked at 360 and 1280px in light and dark; all expanded FAQ questions/answers also fit all four widths.
+- Support Lebanon uses the existing six-stage automatic transition without Skip/Cancel controls. Reduced-motion navigation is preserved.
+- Native FAQ toggles, carousel navigation, generic-example disclaimer, mobile menu, theme toggle, form validation/focus, all revised route/fragment targets and both MODE destinations tested. Live checkout visibility tested with an in-memory config fixture only.
+- Form fields/settings, original image files, SVG artwork, style files, config values, sourced context, consent/visibility gates and the carousel/transition animation cores remain unchanged. Hero CTA label rendering preserves the existing arrow artwork.
+- Em dashes were removed from revised HTML/metadata and generated text. The homepage hero has no eyebrow or extra decorative slogan.
+- Local mobile Lighthouse: homepage **91/100/100** and Lebanon **100/100/100** for Performance/Accessibility/SEO. The shorter homepage headline brought its photo into the LCP area; an additional 672px delivery variant of that same original image restores the performance target without changing composition, displayed dimensions or layout. Original image files were not edited. A trial preload was removed after it did not improve the audit.
+- TypeScript/widget production build, JavaScript syntax and git diff checks passed. The build regenerates the revised static product-section copy, so a later widget rebuild will retain the messaging.
+
+Supplier/product confirmation, pricing/shipping/launch/policy details and real contact/payment setup still require owner verification. The new copy does not claim measured business impact or guaranteed growth. Hosted Netlify submission delivery and production deployment were not independently tested here.

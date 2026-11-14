@@ -49,3 +49,9 @@
 
 - Confirm the 21st.dev dish-orbit-carousel component's license terms allow commercial use before launch; its font's OFL notice is not the component license.
 - Switch BOX_ITEMS_MODE to "real" only once at least three makers and actual product photos are confirmed. Populate verified names and local photo assets, then rebuild the widget and static fallback.
+
+## Mission messaging verification
+
+- Confirm supplier participation and final box contents before replacing concept/example disclosures or the supplier-status FAQ.
+- Confirm pricing, shipping markets/costs/timing, launch availability, subscription/guarantee terms, real contact details and payment handoff before enabling sales. Existing configuration values remain unchanged and unverified values must not become public promises by assumption.
+- Keep the commerce and growth language aspirational until actual outcomes can be substantiated; do not add measurable-impact claims without evidence.
