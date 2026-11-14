@@ -146,3 +146,120 @@ body{overflow-x:clip}[data-page=global] #hero{overflow:clip}.logo span{letter-sp
 [data-page=lebanon] #faq h2{max-width:12ch;margin-bottom:48px}
 [data-page=lebanon] #faq .sales-faq{width:72%;margin-left:auto;max-width:none}
 @media(max-width:600px){[data-page=lebanon] #comparison h2{margin-left:0;font-size:42px}[data-page=lebanon] #comparison .table-scroll,[data-page=lebanon] #faq .sales-faq{width:100%}[data-page=lebanon] #faq h2{font-size:46px;margin-bottom:32px}}
+/* Cleanup: normal flow, restrained type and a clear band for each section. */
+:root{--sky:#cfe0e8;--sky-ink:#1d1b17;--saffron:#f0c869;--content-width:1200px;--gutter:40px;--section-padding:96px;--layout-gap:48px;--heading-large:88px;--heading-medium:40px;--body-size:17px;--focus-color:#32647c}
+:root[data-theme=dark]{--sky:#2b4551;--sky-ink:#f4efe6;--saffron:#5c4927;--focus-color:#a5c8dc}
+h1,h2,h3,.logo span,.gift-body span,.peek-body span{letter-spacing:-.01em!important;word-spacing:normal!important;line-height:1.1!important;overflow:visible;text-overflow:clip}
+h1{font-size:var(--heading-large)!important}h2,h3{font-size:var(--heading-medium)!important}
+p,label,input,select,textarea,summary,legend,.fine,.caption,.box-caption,.facts-row,.footer-bottom,.footer-bottom span,.footer-bottom a,.category-examples,.collection-box-label,.photo-credit{font-size:var(--body-size)!important;line-height:1.6!important;word-spacing:normal}
+.sales-wrap,.wrap,.header-inner,.collection-intro,.advisor-breadcrumb,.end-action{max-width:var(--content-width)!important;width:100%;padding-inline:var(--gutter)!important;margin-inline:auto}
+.sales-section{padding-block:var(--section-padding)!important}.sales-section .sales-wrap{padding-block:0!important}
+.sales-section h2,.sales-section h3{margin:0 0 24px;max-width:none!important}.sales-section p{margin:0 0 24px;max-width:62ch}
+.header-inner{gap:24px;padding-block:24px}.header-actions{gap:16px}.logo:after,.button:after{display:none!important}.logo span{letter-spacing:-.01em!important;white-space:normal}
+.button,.button.join,.button.outline,.button.small,.header-primary.button.join,.checkout-page .button,[data-page=lebanon] .hero-box-visual .button{border-radius:4px;background:var(--action);border:1px solid var(--action);color:var(--action-text);font:600 var(--body-size)/1.3 'DM Sans',sans-serif!important;padding:14px 24px;min-height:48px;box-shadow:none;transform:none!important;text-decoration:none;letter-spacing:0}
+.button:hover{border-color:var(--ink);text-decoration:none}.inline-link,.country-link{display:inline-block;color:inherit;font-size:var(--body-size);font-weight:600;padding-block:10px;line-height:1.6}.inline-link:hover,.country-link:hover{text-decoration:underline}
+.margin-note,.hero-margin-note{display:none!important}.global-print,[data-page=lebanon] .hero-box-visual{transform:none!important;width:100%!important;max-width:100%!important;margin:0!important;position:relative;inset:auto}
+.global-hero .hero-layout,[data-page=lebanon] #hero .hero-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:var(--layout-gap);align-items:center;text-align:left}
+.global-hero .hero-layout>div,[data-page=lebanon] #hero .hero-copy-new{min-width:0}.global-hero h1,[data-page=lebanon] #hero h1{margin:0 0 32px!important;max-width:none;line-height:1.1!important}
+.global-hero p,[data-page=lebanon] #hero .hero-copy-new>p:first-of-type{font:400 var(--body-size)/1.6 'DM Sans',sans-serif!important;max-width:38ch;color:var(--ink);margin:0 0 24px}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:24px;margin:24px 0!important}.hero-actions .inline-link{margin:0}
+[data-page=lebanon] #hero{background:var(--bg);overflow:visible;z-index:auto}.global-hero{background:var(--bg)!important}
+[data-page=lebanon] .hero-box-visual{padding:24px;background:var(--pale);min-height:0!important;text-align:left;z-index:auto;align-self:center}
+[data-page=lebanon] .hero-photo{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+[data-page=lebanon] .peek-gift{position:relative;width:260px;max-width:100%;height:230px;padding:0;margin:0 auto 24px;transform:none!important}
+[data-page=lebanon] .peek-body{width:250px;max-width:100%;height:150px;left:5px;bottom:0}
+[data-page=lebanon] .peek-lid{width:264px;max-width:calc(100% + 4px);height:34px;top:46px;left:-2px}
+[data-page=lebanon] .peek-body:before,[data-page=lebanon] .peek-lid:before{left:106px;width:36px}
+[data-page=lebanon] .peek-body span{font-size:30px!important}
+[data-page=lebanon] .peek-item{top:90px;font-size:var(--body-size);line-height:1.5}
+[data-page=lebanon] .hero-box-visual .box-caption{transform:none;margin:16px 0 0!important}
+[data-page=lebanon] .hero-box-visual .button{margin:0}
+[data-page=lebanon] .collection-box-label{font-family:'DM Sans',sans-serif;color:var(--muted);margin:0 0 24px!important}
+[data-page=lebanon] #impact,[data-page=global] #countries,footer{background:var(--band)!important;color:var(--band-ink)}
+[data-page=lebanon] #impact h2,[data-page=global] #countries h2,[data-page=global] #countries h3,[data-page=global] #countries p,[data-page=global] #countries a,footer p,footer a,footer span,footer .logo span{color:var(--band-ink)!important}
+[data-page=lebanon] #impact .polaroids{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:32px 0 0!important;align-items:start}
+[data-page=lebanon] #impact .polaroids figure{width:100%!important;max-width:none!important;margin:0!important;transform:none!important;border-width:8px;border-radius:0;padding-bottom:16px;box-shadow:none}
+[data-page=lebanon] #impact .polaroids figcaption,[data-page=lebanon] #impact .polaroids figure:nth-child(-n+2) figcaption{font:400 var(--body-size)/1.6 'DM Sans',sans-serif;color:var(--ink)!important;padding:16px 8px 0}
+.polaroids img{aspect-ratio:4/5;object-fit:cover}
+[data-page=lebanon] #context,[data-page=global] #context{background:var(--sky)!important;color:var(--sky-ink)}
+[data-page=lebanon] #context .sales-wrap,[data-page=global] #context .sales-wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:var(--layout-gap);align-items:start}
+[data-page=lebanon] #context h2,[data-page=global] #context h2{grid-column:auto;grid-row:auto;max-width:none}
+[data-page=lebanon] #context [data-context],[data-page=global] #context .sales-wrap>p{grid-column:auto;grid-row:auto;margin:0}
+[data-page=global] #context [data-context-links]{grid-column:2;margin:0}
+[data-page=lebanon] #inside{background:var(--bg)!important}
+[data-page=lebanon] #inside .sales-wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:var(--layout-gap);align-items:start}
+[data-page=lebanon] #inside .section-intro{min-width:0;grid-column:1;grid-row:auto;position:static;inset:auto;height:auto}
+[data-page=lebanon] #inside .section-intro>h2,[data-page=lebanon] #inside .section-intro>p{position:static;grid-area:auto;inset:auto;max-width:none;height:auto;margin:0 0 24px}
+[data-page=lebanon] #inside .sales-categories{display:block;grid-column:2;grid-row:auto;min-width:0;margin:0!important}
+[data-page=lebanon] #inside article{display:block;position:static;padding:24px 0;border-top:1px solid var(--border);min-width:0;height:auto}
+[data-page=lebanon] #inside article:first-child{padding-top:0;border-top:0}
+[data-page=lebanon] #inside h3{font-size:var(--heading-medium)!important;margin:0 0 12px}
+[data-page=lebanon] #inside .category-examples{font-size:var(--body-size);margin:0!important;max-width:45ch;padding:0;border:0}
+[data-page=lebanon] #pricing,[data-page=lebanon] #waitlist,[data-page=global] #interest{background:var(--saffron)!important;color:var(--ink)}
+[data-page=lebanon] #pricing p,[data-page=lebanon] #waitlist p,[data-page=global] #interest p{color:var(--ink)}
+[data-page=lebanon] #pricing .sales-wrap,[data-page=lebanon] #waitlist .sales-wrap,[data-page=global] #interest .sales-wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:var(--layout-gap);align-items:start}
+[data-page=lebanon] #pricing h2,[data-page=lebanon] #waitlist h2,[data-page=global] #interest h2{grid-column:1;grid-row:1;max-width:none}
+[data-page=lebanon] #pricing .membership-price{grid-column:2;grid-row:1/3;padding:32px;margin:0;background:var(--bg);border:1px solid var(--border)}
+[data-page=lebanon] #pricing .membership-price h3{font-size:var(--heading-medium)!important;margin-bottom:24px}
+[data-page=lebanon] #pricing .single-strip{grid-column:2;grid-row:auto;margin:0;padding:0;background:none}
+[data-page=lebanon] #pricing .pricing-information{grid-column:1/-1;padding-block:0!important;margin:0;background:transparent!important;color:var(--ink)}
+[data-page=lebanon] #pricing .pricing-information .sales-wrap{display:block;max-width:none;width:100%;padding:0!important;margin:0}
+[data-page=lebanon] #pricing .pricing-information h2{margin:0 0 24px!important;max-width:none!important}
+[data-page=lebanon] #pricing .pricing-information .table-scroll{width:100%;margin:0}
+[data-page=lebanon] #pricing .pricing-information table{min-width:0;width:100%;font-size:var(--body-size)}
+[data-page=lebanon] #pricing .guarantee-layout{display:block;max-width:none;margin:0;text-align:left}
+[data-page=lebanon] #pricing .guarantee-layout p{max-width:62ch}
+[data-page=lebanon] #pricing .guarantee-layout ul{margin:24px 0 0;padding-left:24px}
+[data-page=lebanon] #waitlist .program-form,[data-page=global] #interest .program-form{grid-column:2;grid-row:1/4;max-width:none;width:100%;margin:0}
+[data-page=lebanon] #waitlist .sales-wrap>p,[data-page=global] #interest .sales-wrap>p{grid-column:1;grid-row:2;margin:0;max-width:32ch}
+[data-page=lebanon][data-mode] #faq{background:var(--bg)!important}
+[data-page=lebanon] #faq .sales-wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:var(--layout-gap);align-items:start}
+[data-page=lebanon] #faq h2{margin:0!important;max-width:none}
+[data-page=lebanon] #faq .sales-faq{width:100%;margin:0;max-width:none}
+[data-page=lebanon] #faq summary,[data-page=lebanon] #faq details p{font-size:var(--body-size)!important;line-height:1.6!important}
+[data-page=global] #countries .sales-wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:24px var(--layout-gap)}
+[data-page=global] #countries h2{grid-column:1;grid-row:1;max-width:none;margin:0}
+[data-page=global] #countries .sales-wrap>p{grid-column:1;grid-row:2;max-width:32ch;margin:0}
+[data-page=global] #countries .country-grid{grid-column:2;grid-row:1/4;margin:0}
+.country-card h3{font-size:var(--heading-medium)!important}.country-card{padding:24px 0}.country-card p{margin-bottom:16px}
+[data-page=global] #how-it-works{background:var(--bg)!important}
+[data-page=global] #how-it-works .sales-wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:var(--layout-gap)}
+[data-page=global] #how-it-works .global-steps{margin:0}.global-steps h3{font-size:var(--heading-medium)!important}
+[data-page=global] #for-makers{background:var(--bg)!important;color:var(--ink)}
+[data-page=global] #for-makers h2,[data-page=global] #for-makers p,[data-page=global] #for-makers a{color:var(--ink)}
+[data-page=global] #for-makers .sales-wrap{gap:var(--layout-gap)}
+footer{padding-block:var(--section-padding)!important}.footer-top{display:grid;grid-template-columns:1.1fr .7fr 1fr;gap:var(--layout-gap);padding-bottom:48px}
+.footer-action{padding-bottom:48px}.footer-action .button{color:var(--action-text)!important}.footer-bottom{padding-top:24px;padding-bottom:0}.footer-top p{max-width:32ch}
+footer :focus-visible,[data-page=global] #countries :focus-visible,[data-page=lebanon] #impact :focus-visible{outline-color:var(--band-ink)}
+.program-form{min-width:0}.program-form .button{width:auto;min-width:0}.program-form input:not([type=checkbox]),.program-form select,.program-form textarea{color:var(--ink);min-width:0;max-width:100%;height:auto}
+.advisor-entry,.situation-block{gap:var(--layout-gap)}.advisor-main,.advisors-main{max-width:var(--content-width)}
+@media(max-width:767px){:root{--gutter:24px;--section-padding:64px;--layout-gap:32px;--heading-large:56px;--heading-medium:32px}
+.global-hero .hero-layout,[data-page=lebanon] #hero .hero-layout{grid-template-columns:minmax(0,1fr);display:grid;gap:32px}
+.header-inner{gap:12px;min-height:136px;padding-block:16px}.header-inner>.header-actions{height:48px;min-height:48px}.header-actions{gap:12px}
+.header-primary.button.join{font-size:16px!important;padding:12px 16px;min-height:48px}.theme-toggle{flex-shrink:0}
+[data-page=lebanon] .hero-box-visual{padding:24px;min-width:0;overflow:visible}
+[data-page=lebanon] .peek-gift{width:260px;max-width:100%;height:230px;margin:0 auto 24px;transform:none!important}
+[data-page=lebanon] #impact .polaroids{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px!important}
+[data-page=lebanon] #impact .polaroids figure{border-width:4px;padding-bottom:12px;grid-column:auto!important}
+[data-page=lebanon] #impact .polaroids figcaption{font-size:16px!important;padding:8px 4px 0;overflow-wrap:anywhere}
+[data-page=lebanon] #context .sales-wrap,[data-page=global] #context .sales-wrap,[data-page=lebanon] #inside .sales-wrap,[data-page=lebanon] #pricing .sales-wrap,[data-page=lebanon] #waitlist .sales-wrap,[data-page=global] #interest .sales-wrap,[data-page=lebanon] #faq .sales-wrap,[data-page=global] #countries .sales-wrap,[data-page=global] #how-it-works .sales-wrap,[data-page=global] #for-makers .sales-wrap{display:flex;flex-direction:column;gap:32px}
+[data-page=lebanon] #inside .sales-categories,[data-page=global] #countries .country-grid{width:100%;margin:0}
+[data-page=lebanon] #inside .section-intro>p{margin-bottom:0}
+[data-page=lebanon] #inside article{padding:24px 0}
+[data-page=lebanon] #pricing .membership-price{padding:24px;width:100%}
+[data-page=lebanon] #pricing .pricing-information{width:100%}
+[data-page=lebanon] #pricing .pricing-information table{min-width:0;table-layout:fixed}
+[data-page=lebanon] #pricing .pricing-information th,[data-page=lebanon] #pricing .pricing-information td{font-size:16px!important;padding:16px 8px;overflow-wrap:anywhere}
+[data-page=lebanon] #pricing .pricing-information th:first-child{width:38%}
+[data-page=lebanon] #waitlist .program-form,[data-page=global] #interest .program-form{margin:0;width:100%}
+.program-form .button{width:100%}.footer-top{grid-template-columns:minmax(0,1fr);gap:24px}.footer-action{padding-bottom:32px}
+}
+@media(max-width:480px){[data-page=lebanon] #impact .polaroids{grid-template-columns:minmax(0,1fr)}[data-page=lebanon] #impact .polaroids figure{max-width:none!important;width:100%!important;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:0;border-width:8px}[data-page=lebanon] #impact .polaroids img{aspect-ratio:4/3;width:100%;height:auto!important}[data-page=lebanon] #impact .polaroids figcaption{padding:16px!important;font-size:var(--body-size)!important}}
+:root{--photo:#f4efe6;--pale:#f4efe6}
+:root[data-theme=dark]{--photo:#29261e;--pale:#29261e}
+:root[data-theme=dark] #impact img[src$="fallback-maker.svg"]{filter:brightness(.65)}
+[data-page=lebanon] #pricing .single-strip a,[data-page=lebanon] #pricing .guarantee-layout a,[data-page=lebanon] #pricing caption,.program-form .error{color:var(--ink)}
+.end-action{padding-block:var(--section-padding)}
+/* One body size, including links and footnotes; brand marks and price figures are display text. */
+a,label,summary,fieldset,legend,figcaption,caption,small,select,input,textarea,li,ol,ul,.error,.fine,.caption,.micro,.reviewed,.photo-credit,.global-steps>article>span{font-size:var(--body-size)!important;line-height:1.6!important}
+h1,h2,h3,.logo span{letter-spacing:0!important;word-spacing:normal!important}
