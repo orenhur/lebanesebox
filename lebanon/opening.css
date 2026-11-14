@@ -43,3 +43,6 @@
 #context .context-reading a{text-underline-offset:3px}
 #context .context-editorial img{display:block;width:100%;height:auto;max-height:480px;object-fit:contain;border-radius:10px}
 @media(max-width:767px){[data-experience=lebanon] #context .context-editorial{grid-template-columns:minmax(0,1fr);gap:24px}#context .context-editorial>h2,#context .context-photo-slot,#context .context-editorial-copy{grid-column:1;grid-row:auto}#context .context-photo-slot{min-height:220px;padding:24px}}
+
+#context figure.context-photo-slot{display:block;min-height:0;max-height:none;padding:0;margin:0;background:transparent}
+#context figure.context-photo-slot img{width:100%;height:auto;max-height:480px;object-fit:contain;object-position:top left;border-radius:10px}

@@ -10,3 +10,5 @@ Uploaded by the site owner for illustrative use. Originals are preserved in asse
 Credits and source IDs come from the supplied filenames. Source-page metadata and commercial permission were not independently verified in this environment. No location, damage cause, partnership or supplier relationship is asserted.
 
 The two Zeeshan Khan ZIPs contain identical files. The pottery artisan was subsequently supplied in its own ZIP and integrated.
+
+User-supplied context image (download.png): original preserved as user-supplied-context.png. Integrated on owner request. Source, date, location, photographer and commercial usage rights have not been independently verified. No event-specific caption or attack count is published.
