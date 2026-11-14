@@ -31,3 +31,11 @@
 #opportunity .economic-context-photo figcaption{font-size:16px;line-height:1.5;margin-top:12px}
 @media(hover:hover) and (prefers-reduced-motion:no-preference){#mission .mission-story-images img,#opportunity .economic-context-photo img{transition:filter .2s ease}#mission .mission-story-images img:hover,#opportunity .economic-context-photo img:hover{filter:brightness(1.03)}}
 @media(max-width:767px){#opportunity .opportunity-photo-layout{grid-template-columns:minmax(0,1fr)}#opportunity .economic-context-photo{width:min(100%,360px);justify-self:center}}
+#opportunity .opportunity-photos{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;min-width:0}
+#opportunity .opportunity-photos figure{margin:0;min-width:0;width:auto}
+#opportunity .opportunity-photos img{display:block;width:100%;height:auto;border-radius:10px}
+#opportunity .opportunity-photos figcaption{font-size:16px;line-height:1.5;margin-top:12px}
+#opportunity .opportunity-photos figcaption strong{display:block;margin-bottom:4px}
+#opportunity .opportunity-photos figcaption a{color:inherit;text-underline-offset:3px}
+#opportunity .opportunity-photos .economic-context-photo{padding-top:48px}
+@media(max-width:767px){#opportunity .opportunity-photos{gap:16px}#opportunity .opportunity-photos .economic-context-photo{padding-top:24px}}
