@@ -21,3 +21,13 @@
 #mission .mission-photo-pending{padding:12px;aspect-ratio:1}
 #mission .mission-people .mission-photo-pending{aspect-ratio:3/4}
 }
+/* Preserve every supplied photograph's full aspect ratio. */
+#mission .mission-story-images img{height:auto;aspect-ratio:auto;border-radius:10px}
+#mission .mission-people img{width:100%}
+#mission figcaption a,.economic-context-photo figcaption a{color:inherit;text-underline-offset:3px}
+#opportunity .opportunity-photo-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(24px,5vw,72px);align-items:center}
+#opportunity .economic-context-photo{margin:0;min-width:0}
+#opportunity .economic-context-photo img{display:block;width:100%;height:auto;border-radius:10px}
+#opportunity .economic-context-photo figcaption{font-size:16px;line-height:1.5;margin-top:12px}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){#mission .mission-story-images img,#opportunity .economic-context-photo img{transition:filter .2s ease}#mission .mission-story-images img:hover,#opportunity .economic-context-photo img:hover{filter:brightness(1.03)}}
+@media(max-width:767px){#opportunity .opportunity-photo-layout{grid-template-columns:minmax(0,1fr)}#opportunity .economic-context-photo{width:min(100%,360px);justify-self:center}}
