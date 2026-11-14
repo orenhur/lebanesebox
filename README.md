@@ -52,3 +52,11 @@ node scripts/update-sitemap.cjs
 The helper adds or removes the advisor URL using the same eligibility predicate as the browser. Run it before both draft and production deployments (or set it as your hosting preparation command). It uses Node’s built-in modules and installs nothing.
 
 founderNote in config.js holds an empty name and detail. The optional note stays hidden until both approved values are present. The existing MODE, pricing, contact, countries and context configuration values are unchanged.
+
+## Official brand transition
+
+The uploaded PNG is retained unchanged. assets/brand/ contains its pixel-identical lossless WebP and source-derived symbol/favicon exports; the source checksum and crop details are documented there.
+
+brand.js intercepts only same-origin links into the Lebanon collection from other pages. It prefetches the destination and stages the original raster artwork over approximately 1.8 seconds, then uses native navigation. Cancel/Escape, skip, reduced motion, missing-art fallback and browser history are supported. brand-arrival.js provides a short matching destination curtain without changing MODE or the data-driven content gates.
+
+Country and residence options are included in HTML for native no-JavaScript forms, then refreshed from the shared data by JavaScript. Native validation is used without JavaScript; the existing inline validation remains active when JavaScript runs. Checkout without JavaScript provides a safe collection link rather than accepting an order.

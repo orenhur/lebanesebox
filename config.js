@@ -3,7 +3,7 @@
 window.SITE_CONFIG = Object.freeze({
  MODE: 'waitlist',
  PARENT_NAME: 'Hand to Hand',
- TAGLINE: 'Authentic products from small businesses, rebuilding.',
+ TAGLINE: 'From their hands to yours.',
  PRICES: { monthly: 39, firstMonth: 31.2, oneTime: 45, currency: 'USD' },
  OFFER_TEXT: '20% off your first box',
  SHIPS_TO: ['United States','Canada','United Kingdom','Australia'],
