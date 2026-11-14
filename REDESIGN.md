@@ -1,6 +1,6 @@
 # Hand to Hand editorial experience
 
-The existing static HTML/CSS/JavaScript architecture is retained. No framework migration, new dependency, build service, payment service, or backend was introduced.
+The main site retains its static HTML/CSS/JavaScript architecture. The later box-item integration adds an isolated React/GSAP widget in widgets/box-carousel, compiled to a committed static JS file. No site-wide framework migration, hosted build service, payment service or backend was introduced.
 
 ## Shared design system
 
@@ -12,9 +12,9 @@ The existing static HTML/CSS/JavaScript architecture is retained. No framework m
 
 The exact official logo master files are unchanged. Proportional lossless display derivatives keep header/footer downloads small. Transition symbol layers isolate pixels from that artwork into transparent canvases; the final frame is the original full bitmap. The existing native-navigation transition retains cancellation, skipping, failure bypass, focus management, and reduced-motion behavior.
 
-## Future Lebanon showcase
+## Lebanon box showcase
 
-`#inside[data-component="LebanonProductShowcase"]` is the integration boundary. Mount the supplied future 21st.dev component in `[data-showcase-mount]`. Its current native static scene and copy are deliberate usable content, not a substitute carousel. No GSAP, React, scroll pinning or slider was installed. When integrating, preserve the section anchor, server-readable text, disclosure, keyboard navigation and reduced-motion behavior.
+The supplied 21st.dev orbit component now powers `#box-items` with mount point `#box-carousel`. The former `#inside` URL remains an alias, and `#makers` aliases the existing maker section. The widget has its own build-only dependencies and injects its CSS from one committed JS bundle; the rest of the site remains static. Flat SVG example types replace product photos in this section. See widgets/box-carousel/README.md for mode filtering, rebuilding the no-JavaScript fallback, accessibility and optional pinning constraints.
 
 ## Truthfulness and existing integrations
 

@@ -64,3 +64,7 @@ Country and residence options are included in HTML for native no-JavaScript form
 ## Editorial homepage and Lebanon experience
 
 See [REDESIGN.md](REDESIGN.md) for the shared theme primitives, static showcase boundary, image disclosures, preserved integrations and launch follow-up. The two redesigned routes load experience-foundation.css and experience.css; existing auxiliary pages continue to use styles.css.
+
+## Lebanon box-item carousel
+
+The Lebanon product-type section now uses the supplied orbit animation as an isolated static-deploy widget. To rebuild: `cd widgets/box-carousel`, `npm install`, then `npm run build`. Commit the generated assets/js/box-carousel.js and Lebanon HTML fallback with source/data changes. Netlify continues to serve the repository root without a build step. See [widgets/box-carousel/README.md](widgets/box-carousel/README.md), including the required rebuild after changing BOX_ITEMS_MODE or box-items.js for JavaScript-disabled visitors.

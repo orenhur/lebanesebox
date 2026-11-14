@@ -32,3 +32,21 @@ There is no build, TypeScript or lint configuration in the existing static repos
 ## Remaining launch work
 
 See REDESIGN.md and TODO.md. Supply the future 21st.dev source; confirm actual products, partners, pricing, shipping and terms before enabling sales; configure and verify payment links and real contact details; verify Netlify delivery; set social-preview URLs to the confirmed public domain. Concept imagery is explicitly disclosed and is not confirmed inventory.
+
+## Box-item carousel follow-up
+
+The supplied orbit animation is now integrated only into the Lebanon box-item section. The previous general redesign checks above describe the earlier checkpoint; its former Peek inside packaging UI was replaced inside this section by the requested carousel.
+
+- Local mobile Lighthouse for `/lebanon/`: Performance **91**, Accessibility **100**, SEO **100**. The previous redesign audit measured 92/100/100, so the observed Performance score is one point lower. These local scores can vary between runs.
+- A separate audit with the carousel mounted at `#box-items` measured Accessibility **100** and SEO **100**.
+- The bundle is not requested in the initial viewport; IntersectionObserver loads it near the section. Production build checks enforce one minified JS chunk, no separate CSS, no source map and no ScrollTrigger module in the default file.
+- Six items checked at 360, 768, 1280 and 1600px, in light and dark. No horizontal page overflow or clipped titles. Every item type switches through arrows, pager, thumbnails, keyboard and product-image swipe; looping and About/Made with tabs work. Text and category-badge contrast met AA across all six items in both themes.
+- Normal-motion GSAP rotation was observed. Reduced-motion tests switched instantly without swing or wipe. Source comparison confirmed that the supplied swap timeline is unchanged apart from comments/data naming; SWING and arc geometry are retained.
+- Examples suppress maker data even when deliberately injected into an example during a browser test. Actual production data contains exactly six generic types, no maker names and no photos.
+- Real mode with no eligible items and hidden mode remove the section and its page links. Three temporary in-memory real entries with existing local image assets displayed maker fields and Meet the maker; entries with missing names/images were excluded. All fixtures remained outside production data.
+- Static fallback generation was tested in an isolated temporary directory: examples (six), real with zero qualifying items (hidden), hidden, real with three qualifying entries, and real with only two (hidden). Actual no-JavaScript and failed-bundle browser tests both displayed the six-item fallback.
+- Existing live MODE still chooses Choose your box/#pricing, while the actual waitlist MODE chooses Join the waitlist/#waitlist. Neither MODE logic nor existing config values changed.
+- Protected section copy, forms/Netlify markup, homepage, branding transition, logo masters, shared styles, context, Situation and advisors remain unchanged. Only BOX_ITEMS_MODE is added to configuration, alongside the required section/anchor hooks.
+- TypeScript checking, Vite production build, browser runtime checks and git diff --check passed. Rebuilding after config/data changes refreshes the HTML fallback needed by JavaScript-disabled visitors.
+
+- Final widget artifact: 231,985 bytes minified; 79,613 bytes gzip. An actual emulated mobile touch gesture also advanced the item and produced the requested live announcement.

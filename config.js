@@ -2,6 +2,8 @@
 // TODO: confirm parent brand, prices, offer and ship-to countries before launch.
 window.SITE_CONFIG = Object.freeze({
  MODE: 'waitlist',
+ // Box showcase: examples | real | hidden. Real needs at least three verified items.
+ BOX_ITEMS_MODE: 'examples',
  PARENT_NAME: 'Hand to Hand',
  TAGLINE: 'From their hands to yours.',
  PRICES: { monthly: 39, firstMonth: 31.2, oneTime: 45, currency: 'USD' },

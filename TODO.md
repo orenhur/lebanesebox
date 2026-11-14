@@ -42,5 +42,10 @@
 ## Editorial redesign follow-up
 
 - Replace generated concept scenes in assets/editorial with approved, licensed product photography once actual products and participating makers are confirmed. Preserve disclosure until imagery reflects real inventory; see assets/editorial/README.md.
-- Supply the original 21st.dev carousel source before implementing the future LebanonProductShowcase mount. Keep the current native static content usable until integration is complete.
+- The supplied 21st.dev orbit carousel is integrated in widgets/box-carousel with a native static fallback. Complete the license and verified-item checks below before launch.
 - Set absolute social-preview URLs after confirming the public domain; verify hosted Netlify form delivery and real contact details before launch.
+
+## Box-item carousel
+
+- Confirm the 21st.dev dish-orbit-carousel component's license terms allow commercial use before launch; its font's OFL notice is not the component license.
+- Switch BOX_ITEMS_MODE to "real" only once at least three makers and actual product photos are confirmed. Populate verified names and local photo assets, then rebuild the widget and static fallback.
