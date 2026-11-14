@@ -1,0 +1,26 @@
+/* Lebanon opening only. Documentary assets await provenance and commercial rights. */
+[data-experience=lebanon] #lebanon-opening{background:var(--bg);color:var(--ink);padding:48px 0 56px}
+#lebanon-opening .opening-grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);column-gap:clamp(24px,4vw,64px);row-gap:24px;align-items:center}
+#lebanon-opening .opening-copy{grid-column:1;grid-row:1}
+#lebanon-opening h2{font-size:clamp(32px,3.5vw,52px);line-height:1.1;letter-spacing:-.01em;margin:0 0 24px}
+#lebanon-opening p{font-size:18px;line-height:1.65;margin:0;max-width:48ch}
+#lebanon-opening .opening-photos{grid-column:2;grid-row:1/3;display:grid;grid-template-columns:1fr 1.1fr;gap:18px;align-items:center;min-width:0}
+#lebanon-opening figure{margin:0;min-width:0}
+#lebanon-opening .opening-challenge{padding-top:32px}
+#lebanon-opening .opening-photo-pending{display:flex;align-items:center;justify-content:center;aspect-ratio:3/2;padding:16px;background:var(--experience-sand);color:var(--ink);text-align:center;font-size:16px;line-height:1.5}
+#lebanon-opening .opening-entrepreneur .opening-photo-pending{aspect-ratio:8/9;background:var(--experience-soft)}
+#lebanon-opening figcaption{font-size:16px;line-height:1.5;margin-top:12px}
+#lebanon-opening .opening-action{grid-column:1;grid-row:2;align-self:start}
+#lebanon-opening .button{white-space:normal;text-align:center}
+@media(max-width:767px){
+[data-experience=lebanon] #lebanon-opening{padding:24px 0 40px}
+#lebanon-opening .opening-grid{grid-template-columns:minmax(0,1fr);gap:24px}
+#lebanon-opening .opening-copy,#lebanon-opening .opening-photos,#lebanon-opening .opening-action{grid-column:1;grid-row:auto}
+#lebanon-opening h2{font-size:clamp(32px,6vw,42px);margin-bottom:18px}
+#lebanon-opening p{font-size:16px}
+#lebanon-opening .opening-photos{gap:14px;align-items:start}
+#lebanon-opening .opening-challenge{padding-top:20px}
+#lebanon-opening .opening-photo-pending{padding:12px}
+#lebanon-opening .opening-action .button{width:100%}
+}
+[data-theme=dark] #lebanon-opening .opening-photo-pending{background:var(--experience-soft);color:var(--ink)}
