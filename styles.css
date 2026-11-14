@@ -291,3 +291,27 @@ body:before{display:none}
 .country-card[data-country=lebanon]>h3,.country-card[data-country=lebanon]>p,.country-card[data-country=lebanon]>a{grid-column:1}
 .country-card .country-brand-symbol{grid-column:2;grid-row:1/5;width:88px;height:88px;aspect-ratio:1;object-fit:contain;align-self:center}
 @media(max-width:767px){.country-card[data-country=lebanon]{grid-template-columns:minmax(0,1fr) 72px;gap:12px 16px}.country-card .country-brand-symbol{width:72px;height:72px}}
+
+/* Homepage hero sizing; other page headings retain their existing styles. */
+[data-page=global] #hero h1{font-size:clamp(2.5rem,5.5vw,4.5rem)!important;line-height:1.05!important;letter-spacing:-.01em!important;max-width:13ch}
+[data-page=global] #hero{padding-block:64px!important}
+[data-page=global] #how{scroll-margin-top:48px}
+/* Homepage sections below the hero. Palette and other pages stay unchanged. */
+[data-page=global] #problem,[data-page=global] #what-you-get{background:var(--sky);color:var(--sky-ink)}
+[data-page=global] #solution,[data-page=global] #for-makers{background:var(--bg)!important;color:var(--ink)}
+[data-page=global] #an-order{background:var(--band);color:var(--band-ink);padding-block:48px!important}
+[data-page=global] #how{background:var(--saffron);color:var(--ink)}
+[data-page=global] .home-editorial .sales-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--layout-gap);align-items:start}
+[data-page=global] .home-editorial h2,[data-page=global] .home-editorial p,[data-page=global] .home-short-band p{color:inherit;margin-bottom:0}
+[data-page=global] #how .sales-wrap{display:block}
+[data-page=global] #how .global-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--layout-gap);margin-top:40px}
+[data-page=global] #how h2,[data-page=global] #how h3,[data-page=global] #how p,[data-page=global] #how article>span{color:inherit}
+[data-page=global] #how article{min-width:0}
+[data-page=global] #how h3{overflow-wrap:break-word}
+[data-page=global] #countries .sales-wrap{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}
+[data-page=global] #countries .country-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:32px;min-width:0;width:100%}
+[data-page=global] #for-makers .button{color:var(--action-text)}
+[data-page=global] #problem,[data-page=global] #how,[data-page=global] #countries,[data-page=global] #interest,[data-page=global] #context,[data-page=global] #how-it-works{scroll-margin-top:48px}
+@media(max-width:767px){[data-page=global] .home-editorial .sales-wrap{grid-template-columns:minmax(0,1fr);gap:32px}[data-page=global] #how .global-steps{grid-template-columns:minmax(0,1fr);gap:32px}[data-page=global] #countries .country-grid{display:grid}}
+[data-page=global] #how #how-it-works{background:transparent!important}
+[data-page=global] #an-order h2{color:inherit}
