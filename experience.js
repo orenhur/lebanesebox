@@ -13,7 +13,7 @@
   image.sizes='(max-width:767px) calc(100vw - 40px), 55vw';image.width=1536;image.height=1024;image.loading='lazy';
   image.alt='Concept Lebanese-inspired collection of ceramics, coffee, spices and soap';
   image.addEventListener('error',()=>{image.removeAttribute('srcset');image.alt='An outline of a parcel on warm paper';image.src='/assets/images/fallback.svg';},{once:true});
-  const frame=document.createElement('figure');frame.className='country-photo-frame';const caption=document.createElement('figcaption');caption.textContent='Concept imagery · Products not yet confirmed.';frame.append(image,caption);card.prepend(frame);
+  const frame=document.createElement('figure');frame.className='country-photo-frame';frame.append(image);card.prepend(frame);
  }
  const menu=document.querySelector('.menu-toggle'),nav=document.querySelector('#navigation');
  if(menu&&nav){
