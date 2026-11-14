@@ -1,0 +1,185 @@
+/* Shared primitives. Page identity is selected by data-experience, not by MODE. */
+[data-experience]{--experience-paper:#FAF7F1;--experience-ink:#092344;--experience-sand:#EBD9C4;--experience-accent:#B51224;--experience-soft:#F2EBE1;--experience-line:#d5cbbf;--experience-section:104px;--experience-gutter:clamp(20px,4.5vw,72px);--experience-width:1440px;--bg:var(--experience-paper);--surface:#fff;--ink:var(--experience-ink);--muted:#536070;--border:var(--experience-line);--action:var(--experience-accent);--action-text:#fff;--body-size:17px;--focus-color:#32647c;background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:17px;line-height:1.65}
+[data-experience=lebanon]{--experience-ink:#353C28;--experience-accent:#353C28;--experience-soft:#D9E0D0;--experience-sand:#EBD9C4;--band:#353C28;--band-ink:#FAF7F1;--sky:#D9E0D0;--sky-ink:#353C28;--saffron:#F3E9D9;--muted:#555a4e;--focus-color:#51748a}
+[data-theme=dark] [data-experience]{--experience-paper:#111e30;--experience-ink:#FAF7F1;--experience-sand:#332c26;--experience-soft:#1c2d43;--experience-line:#697789;--surface:#1a2a3e;--muted:#c1cbd7;--focus-color:#a5c8dc}
+[data-theme=dark] [data-experience=lebanon]{--experience-paper:#20271c;--experience-ink:#FAF7F1;--experience-accent:#D9E0D0;--experience-soft:#303b2a;--experience-sand:#3c3126;--surface:#2a3324;--muted:#ced4c6;--action-text:#20271c;--experience-line:#75816b}
+[data-experience] *,[data-experience] *:before,[data-experience] *:after{box-sizing:border-box}
+[data-experience] .editorial-wrap{width:100%;max-width:var(--experience-width);margin-inline:auto;padding-inline:var(--experience-gutter)}
+[data-experience] .editorial-section{padding-block:var(--experience-section);position:relative}
+[data-experience] h1,[data-experience] h2,[data-experience] h3{font-family:'Fraunces',Georgia,serif;font-weight:400;letter-spacing:-.01em!important;word-spacing:normal!important;color:inherit;line-height:1.12!important;text-wrap:pretty;overflow-wrap:normal;margin:0}
+[data-experience] h2{font-size:clamp(34px,3.6vw,54px)!important;max-width:19ch}
+[data-experience] h3{font-size:clamp(26px,2.5vw,34px)!important}
+[data-experience] em{font-weight:400;color:inherit}
+[data-experience] p{font-size:17px!important;line-height:1.65!important;margin:0 0 24px;max-width:62ch;color:inherit}
+[data-experience] .eyebrow{font:600 16px/1.5 'DM Sans',sans-serif!important;letter-spacing:.12em;text-transform:uppercase;margin-bottom:24px;max-width:none}
+[data-experience] .button,[data-experience] .button.join{display:inline-flex;align-items:center;justify-content:center;gap:20px;min-height:52px;max-width:100%;padding:14px 22px;border-radius:2px;background:var(--action);border:1px solid var(--action);color:var(--action-text)!important;font:600 16px/1.5 'DM Sans',sans-serif!important;box-shadow:none;text-align:center;white-space:normal;transform:none!important;text-decoration:none}
+[data-experience] .button:hover{filter:brightness(1.12);text-decoration:none}
+[data-experience] .button-secondary{background:transparent!important;color:inherit!important;border-color:currentColor!important}
+[data-experience] .button span{font:400 22px/1 sans-serif;transition:transform .2s}
+[data-experience] .button:hover span{transform:translate(2px,-2px)}
+[data-experience] a:focus-visible,[data-experience] button:focus-visible,[data-experience] summary:focus-visible{outline:2px solid var(--focus-color);outline-offset:5px}
+[data-experience] .editorial-link{display:inline-block;padding:10px 0;border-bottom:1px solid currentColor;color:inherit;font-weight:600;text-decoration:none}
+[data-experience] .experience-header{position:sticky;top:0;z-index:100;background:var(--bg);color:var(--ink);border-bottom:1px solid var(--border);backdrop-filter:none}
+[data-experience] .header-inner{max-width:var(--experience-width)!important;width:100%;padding:10px var(--experience-gutter)!important;min-height:96px;display:flex;gap:24px;align-items:center;justify-content:space-between}
+[data-experience] .header-inner>.logo{width:152px;height:76px;min-height:0;flex:0 0 152px;background:none;border:0;box-shadow:none;padding:0}
+[data-experience] .logo .official-logo{display:block;max-width:100%;width:152px;height:76px;aspect-ratio:2/1;object-fit:contain;border:0;filter:none}
+[data-experience] #navigation{display:flex;position:static;align-items:center;gap:24px;width:auto;padding:0;background:none;box-shadow:none;max-height:none;overflow:visible}
+[data-experience] #navigation a{color:inherit;font-size:16px!important;font-weight:500;white-space:nowrap;padding:8px 0;text-decoration:none}
+[data-experience] #navigation a:hover{text-decoration:underline;text-underline-offset:6px}
+[data-experience] .header-actions{display:flex;gap:16px;align-items:center;min-height:0;height:auto}
+[data-experience] .header-primary.button.join{font-size:16px!important;padding:12px 18px;min-height:48px;white-space:nowrap}
+[data-experience] .theme-toggle,[data-experience] .menu-toggle{color:inherit;width:36px;height:40px;min-width:36px;padding:6px;background:transparent;border:0;flex-shrink:0}
+[data-experience] .menu-toggle{display:none}
+[data-experience] .theme-toggle svg{display:block;width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.5}
+[data-experience] #hero{padding:64px 0 72px!important;background:var(--bg)!important;color:var(--ink)}
+[data-experience] .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:center}
+[data-experience] .hero-copy{min-width:0;padding-block:16px}
+[data-experience] #hero h1{font-size:clamp(44px,4.6vw,70px)!important;line-height:1.05!important;letter-spacing:-.015em!important;max-width:none!important;margin:0 0 28px!important}
+[data-experience] #hero .hero-intro{max-width:49ch;margin:0 0 28px;color:inherit;font-size:17px!important}
+[data-experience] .experience-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:30px 0}
+[data-experience] #hero .hero-note{font-size:16px!important;margin:28px 0 0;display:flex;align-items:center;gap:12px;max-width:none}
+[data-experience] .small-rule{width:28px;height:1px;background:#CB8735;display:inline-block;flex:none}
+[data-experience] figure{margin:0;min-width:0}
+[data-experience] .editorial-image img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:2px;background:var(--experience-soft)}
+[data-experience] .editorial-image figcaption{font:400 16px/1.5 'DM Sans',sans-serif!important;letter-spacing:0;padding-top:12px;color:inherit;max-width:64ch}
+[data-experience] .hero-still-life img{aspect-ratio:1/1;object-fit:cover}
+[data-experience] .feature-band{background:var(--experience-sand);color:var(--ink)}
+[data-experience] .feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding-block:0;gap:0}
+[data-experience] .feature-grid article{padding:44px 32px;min-width:0;border-right:1px solid #09234426}
+[data-experience] .feature-grid article:first-child{padding-left:0}
+[data-experience] .feature-grid article:last-child{padding-right:0;border:0}
+[data-experience] .feature-grid h2{font-size:27px!important;line-height:1.18!important;margin:18px 0 16px;max-width:19ch}
+[data-experience] .feature-grid p{margin:0;font-size:16px!important;max-width:31ch}
+[data-experience] .feature-mark{display:inline-block;font-size:30px;line-height:1;color:inherit}
+[data-experience] .split-editorial{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,7vw,112px);align-items:center}
+[data-experience] .editorial-copy{min-width:0}
+[data-experience] .editorial-copy h2{margin-bottom:28px}
+[data-experience] .editorial-copy>p:last-child{margin-bottom:0}
+[data-experience] .section-heading{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:64px;align-items:end;margin-bottom:48px}
+[data-experience] .section-heading p:last-child{margin-bottom:0}
+[data-experience] #countries{background:var(--experience-soft)!important;color:var(--ink)}
+[data-experience] #countries h2,[data-experience] #countries h3,[data-experience] #countries p,[data-experience] #countries a{color:inherit!important}
+[data-experience] #countries .country-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.7fr);gap:32px;margin:0;width:100%}
+[data-experience] .country-card,[data-experience] .country-card.first-collection{background:transparent;border:0;padding:0;border-radius:0;box-shadow:none!important;transform:none!important;min-width:0}
+[data-experience] .country-card[data-country=lebanon]{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 24px;align-items:center}
+[data-experience] .country-card .country-photo{grid-column:1/-1;grid-row:auto;width:100%;aspect-ratio:16/9;height:auto;object-fit:cover;border-radius:2px;margin-bottom:14px}
+[data-experience] .country-card h3{grid-column:1;grid-row:auto;margin:0!important}
+[data-experience] .country-card p{grid-column:1;grid-row:auto;margin:0!important}
+[data-experience] .country-card .country-link{grid-column:2;grid-row:2/4;align-self:center;padding:12px 0;border-bottom:1px solid currentColor;font-size:16px!important}
+[data-experience] .country-card[data-country=other]{border:1px solid var(--border);padding:36px;display:flex;flex-direction:column;justify-content:center;align-items:start;gap:20px}
+[data-experience] .country-card[data-country=other] h3{font-size:32px!important}
+[data-experience] .country-card[data-country=other] .country-link{margin-top:12px}
+[data-experience] .country-card .country-brand-symbol{display:none}
+[data-experience] #how{background:var(--bg)!important;color:var(--ink)}
+[data-experience] #how-it-works{background:transparent!important}
+[data-experience] .experience-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
+[data-experience] .experience-steps article{border-top:1px solid var(--border);padding-top:24px;min-width:0}
+[data-experience] .experience-steps article>span{display:block;font-size:16px;color:var(--muted);margin-bottom:28px}
+[data-experience] .experience-steps h3{margin:0 0 18px}
+[data-experience] .experience-steps p{margin:0}
+[data-experience] .collection-feature{background:var(--experience-sand);color:var(--ink)}
+[data-experience] .opportunity-section{background:#092344;color:#FAF7F1}
+[data-experience] .opportunity-section h2{max-width:none;margin-bottom:24px}
+[data-experience] .commerce-flow{list-style:none;padding:0;margin:48px 0 24px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+[data-experience] .commerce-flow li{border-top:1px solid #faf7f17a;padding-top:22px;min-width:0}
+[data-experience] .commerce-flow span{display:block;margin-bottom:24px;color:#EBD9C4}
+[data-experience] .commerce-flow p{margin:0;max-width:22ch}
+[data-experience] .model-note{font-size:16px!important;margin:0;padding-top:20px}
+[data-experience] #interest,[data-experience] #waitlist{background:var(--experience-soft)!important;color:var(--ink)}
+[data-experience] .signup-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,7vw,112px);align-items:start}
+[data-experience] .program-form{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:32px;max-width:none;width:100%;margin:0;display:flex;flex-direction:column;gap:20px;text-align:left;min-width:0}
+[data-experience] .program-form label{display:block;margin:0;color:var(--ink);font-weight:500;font-size:16px!important;line-height:1.5!important;min-width:0}
+[data-experience] .program-form input:not([type=checkbox]),[data-experience] .program-form select,[data-experience] .program-form textarea{appearance:auto;display:block;width:100%;max-width:100%;background:var(--bg);color:var(--ink);border:1px solid var(--border);border-radius:4px;padding:14px 16px;margin:8px 0 0;min-height:54px;height:auto;font:400 16px/1.5 'DM Sans',sans-serif!important;box-shadow:none}
+[data-experience] .program-form input:focus-visible,[data-experience] .program-form select:focus-visible{outline:2px solid var(--focus-color);outline-offset:2px}
+[data-experience] .program-form [aria-invalid=true]{border-color:#B51224!important}
+[data-experience] .program-form .error{display:block;min-height:0;margin-top:6px;font-size:16px!important;color:#a31524}
+[data-theme=dark] [data-experience] .program-form .error{color:#ffb3bc}
+[data-experience] .program-form .error:empty{display:none}
+[data-experience] .program-form .consent{display:flex;align-items:center;gap:12px;font-weight:400}
+[data-experience] .program-form input[type=checkbox]{width:18px;height:18px;margin:0;flex:none;accent-color:var(--action)}
+[data-experience] .program-form .button{width:auto;align-self:flex-start;margin-top:4px}
+[data-experience] .program-form .fine,[data-experience] .program-form .form-status{color:var(--ink);font-size:16px!important;margin:0!important}
+[data-experience] .form-status:empty{display:none}
+[data-experience] .closing-section{background:var(--bg);text-align:center}
+[data-experience] .closing-section h2{max-width:none;margin-bottom:24px}
+[data-experience] .closing-section p{margin-inline:auto}
+[data-experience] .closing-section .button{margin-top:12px}
+[data-experience] .experience-footer{background:#092344!important;color:#FAF7F1;padding-block:64px!important}
+[data-experience] .experience-footer .wrap{max-width:var(--experience-width)!important;padding-inline:var(--experience-gutter)!important}
+[data-experience] .footer-top{grid-template-columns:minmax(0,1.5fr) repeat(3,minmax(0,1fr));gap:40px;padding-bottom:48px}
+[data-experience] .footer-top h2{font:600 16px/1.5 'DM Sans',sans-serif!important;margin:0 0 22px;letter-spacing:0!important}
+[data-experience] .footer-top a:not(.logo){display:block;margin-bottom:12px;text-decoration:none}
+[data-experience] .footer-top a:hover{text-decoration:underline}
+[data-experience] .footer-top .logo{display:inline-flex;background:none;border:0;box-shadow:none;padding:0;margin-bottom:20px}
+[data-experience] .footer-top .official-logo{width:176px;height:88px;max-width:100%}
+[data-experience] .footer-top p{font-size:16px!important;max-width:28ch}
+[data-experience] .footer-bottom{display:flex;justify-content:space-between;gap:24px;align-items:center;border-top:1px solid #faf7f16b;padding-top:24px}
+[data-experience] .footer-bottom a{font-size:16px!important;text-decoration:none}
+[data-experience] section[id],[data-experience] #main,[data-experience] #context,[data-experience] #how-it-works{scroll-margin-top:112px}
+[data-experience] .legacy-anchor{position:absolute;inset:0 auto auto 0}
+/* Lebanon collection identity: olive hero, sage feature panels, cream editorial space. */
+[data-experience=lebanon] .collection-breadcrumb{padding-block:16px;display:flex;align-items:center;gap:12px;font-size:16px;background:var(--bg)}
+[data-experience=lebanon] .collection-breadcrumb a{color:inherit;font-size:16px!important;text-decoration:none}
+[data-experience=lebanon] #hero{background:#353C28!important;color:#FAF7F1}
+[data-experience=lebanon] #hero h1{font-size:clamp(44px,4.4vw,66px)!important;color:#FAF7F1}
+[data-experience=lebanon] #hero .button:not(.button-secondary){background:#FAF7F1;border-color:#FAF7F1;color:#353C28!important}
+[data-experience=lebanon] .feature-band{background:var(--experience-soft)}
+[data-experience=lebanon] .feature-grid article:last-child{background:var(--experience-sand);padding-inline:32px}
+[data-experience=lebanon] .collection-story{background:#353C28;color:#FAF7F1}
+[data-experience=lebanon] #inside{background:var(--bg)!important;color:var(--ink)}
+[data-experience=lebanon] .showcase-static{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:64px;align-items:center}
+[data-experience=lebanon] .showcase-copy h3{margin-bottom:24px}
+[data-experience=lebanon] .showcase-note{border-top:1px solid var(--border);padding-top:24px;margin:40px 0 0;font-size:16px!important;max-width:none}
+[data-experience=lebanon] .packaging-peek{border:0;border-top:1px solid var(--border);margin-top:24px;padding-top:16px}
+[data-experience=lebanon] .packaging-peek summary{font-weight:600;cursor:pointer;font-size:16px!important}
+[data-experience=lebanon] .packaging-peek .peek-gift{position:relative;margin:32px auto 24px;width:260px;height:230px;max-width:100%;padding:0;transform:none!important}
+[data-experience=lebanon] .packaging-peek .button{margin:12px 0}
+[data-experience=lebanon] .packaging-peek .box-caption{margin:0;font-size:16px!important}
+[data-experience=lebanon] #impact{background:var(--experience-soft)!important;color:var(--ink)}
+[data-experience=lebanon] #impact h2,[data-experience=lebanon] #impact p,[data-experience=lebanon] #impact a{color:inherit!important}
+[data-experience=lebanon] #context{background:var(--bg)!important;color:var(--ink);padding-block:var(--experience-section)!important}
+[data-experience=lebanon] #context .sales-wrap{max-width:var(--experience-width)!important;padding-inline:var(--experience-gutter)!important;display:grid;grid-template-columns:1fr 1fr;gap:64px}
+[data-experience=lebanon] #context h2{color:inherit;margin:0}
+[data-experience=lebanon] #context .situation-expanded{grid-column:1/-1}
+[data-experience=lebanon] #waitlist .early-access-note{font-size:16px!important;padding-top:16px;border-top:1px solid var(--border)}
+[data-experience=lebanon] #pricing{background:var(--experience-soft)!important;color:var(--ink)}
+[data-experience=lebanon] #faq{background:var(--bg)!important;color:var(--ink);padding-block:var(--experience-section)!important}
+[data-experience=lebanon] #faq .sales-wrap{max-width:var(--experience-width)!important;padding-inline:var(--experience-gutter)!important;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:64px}
+[data-experience=lebanon] #faq h2{color:inherit}
+[data-experience=lebanon] #faq summary{padding:24px 0;line-height:1.5!important;font-size:17px!important}
+[data-experience=lebanon] .closing-section{background:#353C28;color:#FAF7F1}
+[data-experience=lebanon] .closing-section .button{background:#FAF7F1;border-color:#FAF7F1;color:#353C28!important}
+@media(min-width:1500px){[data-experience] #hero{padding-block:80px!important}}
+@media(max-width:1199px){[data-experience] #navigation{display:none;position:absolute;top:100%;left:0;right:0;width:100%;padding:24px var(--experience-gutter);background:var(--bg);border-bottom:1px solid var(--border);flex-direction:column;align-items:flex-start;gap:8px;max-height:calc(100svh - 100px);overflow:auto}[data-experience] #navigation.open{display:flex}[data-experience] #navigation a{width:100%;padding:12px 0}[data-experience] .menu-toggle{display:flex;flex-direction:column;justify-content:center;gap:5px}[data-experience] .menu-toggle span{display:block;height:1px;width:24px;background:currentColor}[data-experience] .hero-grid{gap:32px}[data-experience] #hero h1,[data-experience=lebanon] #hero h1{font-size:clamp(40px,4.5vw,54px)!important}[data-experience] .desktop-break{display:none}[data-experience] .experience-actions{flex-direction:column;align-items:flex-start}[data-experience] .section-heading{gap:40px}[data-experience] .feature-grid article{padding-inline:24px}[data-experience] .feature-grid h2{font-size:25px!important}}
+@media(max-width:767px){[data-experience]{--experience-section:64px;--experience-gutter:20px}[data-experience] .header-inner{min-height:80px;padding-block:10px!important;gap:12px}[data-experience] .header-inner>.logo{width:120px;height:60px;flex:0 0 120px}[data-experience] .header-inner .official-logo{width:120px;height:60px;aspect-ratio:2/1}[data-experience] .header-actions{gap:8px}[data-experience] .header-primary{display:none!important}[data-experience] .header-actions .theme-toggle,[data-experience] .header-actions .menu-toggle{width:40px;height:44px;min-width:40px;padding:8px}[data-experience] #hero{padding:40px 0 48px!important}[data-experience] .hero-grid,[data-experience] .split-editorial,[data-experience] .signup-grid,[data-experience] .section-heading{grid-template-columns:minmax(0,1fr);gap:32px}[data-experience] .hero-copy{padding:0}[data-experience] #hero h1,[data-experience=lebanon] #hero h1{font-size:clamp(42px,8.5vw,62px)!important;line-height:1.08!important;margin-bottom:24px!important}[data-experience] .eyebrow{font-size:16px!important;letter-spacing:.08em;margin-bottom:20px}[data-experience] .experience-actions{flex-direction:row;gap:12px;margin:24px 0}[data-experience] .experience-actions .button{width:100%}[data-experience] #hero .hero-note{margin-top:24px;flex-wrap:wrap}[data-experience] .hero-still-life img{aspect-ratio:3/2}[data-experience] .feature-grid{grid-template-columns:minmax(0,1fr)}[data-experience] .feature-grid article,[data-experience] .feature-grid article:first-child,[data-experience] .feature-grid article:last-child,[data-experience=lebanon] .feature-grid article:last-child{padding:32px 0;border-right:0;border-bottom:1px solid var(--border);background:transparent}[data-experience] .feature-grid article:last-child{border-bottom:0}[data-experience] .feature-grid h2{max-width:none;margin-top:16px;font-size:28px!important}[data-experience] .feature-grid p{max-width:none}[data-experience] .feature-mark{font-size:26px}[data-experience] .split-editorial.reverse .editorial-image{order:-1}[data-experience] .section-heading{margin-bottom:32px}[data-experience] #countries .country-grid{grid-template-columns:minmax(0,1fr);gap:32px}[data-experience] .country-card[data-country=lebanon]{grid-template-columns:minmax(0,1fr);gap:12px}[data-experience] .country-card .country-link{grid-column:1;grid-row:auto;justify-self:start;align-self:start}[data-experience] .country-card[data-country=other]{padding:28px}[data-experience] .experience-steps,[data-experience] .commerce-flow{grid-template-columns:minmax(0,1fr);gap:28px}[data-experience] .experience-steps article>span,[data-experience] .commerce-flow span{margin-bottom:16px}[data-experience] .commerce-flow p{max-width:none}[data-experience] .program-form{padding:24px 20px}[data-experience] .program-form .button{width:100%;align-self:stretch}[data-experience] .closing-section{text-align:left}[data-experience] .closing-section p{margin-inline:0}[data-experience] .footer-top{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 24px}[data-experience] .footer-brand{grid-column:1/-1}[data-experience] .footer-bottom{align-items:start;flex-direction:column;gap:12px}[data-experience] section[id],[data-experience] #main,[data-experience] #context,[data-experience] #how-it-works{scroll-margin-top:90px}[data-experience=lebanon] .collection-breadcrumb{padding-block:12px}[data-experience=lebanon] .showcase-static{grid-template-columns:minmax(0,1fr);gap:32px}[data-experience=lebanon] #context .sales-wrap,[data-experience=lebanon] #faq .sales-wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:32px}[data-experience=lebanon] .packaging-peek .peek-gift{width:250px}[data-experience] h2{font-size:clamp(34px,7vw,46px)!important}[data-experience] h3{font-size:28px!important}}
+@media(prefers-reduced-motion:reduce){[data-experience] *,[data-experience] *:before,[data-experience] *:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+/* The symbol reveals use original bitmap pixels, never a redrawn logo. */
+.brand-layer-heart{animation:experienceHeart .55s ease both}
+.brand-layer-upper-hand{animation:experienceHand .4s ease .4s both}
+.brand-layer-lower-hand{animation:experienceHand .4s ease .7s both}
+@keyframes experienceHeart{from{opacity:0;clip-path:inset(0 100% 0 0)}to{opacity:1;clip-path:inset(0)}}
+@keyframes experienceHand{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.brand-layer-heart,.brand-layer-upper-hand,.brand-layer-lower-hand{animation:none!important}}
+/* Isolate shared editorial primitives from older page-specific grid rules. */
+[data-experience] .eyebrow{display:block!important}
+[data-experience] .section-heading{max-width:none;width:100%;margin-inline:0;text-align:left}
+[data-experience] .section-heading h2,[data-experience] .section-heading p{text-align:left;max-width:none;margin-inline:0}
+[data-experience] .section-heading>div,[data-experience] .section-heading>p{min-width:0}
+[data-experience] .signup-grid>.program-form{grid-column:auto!important;grid-row:auto!important}
+[data-experience=brand] #problem{background:transparent!important;color:inherit}
+[data-experience] .cta-icon{display:inline-flex;width:20px;height:20px;flex-shrink:0;vertical-align:middle}
+[data-experience] .cta-icon svg,[data-experience] .feature-mark svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+[data-experience] .feature-mark{width:32px;height:32px}
+[data-experience] main h2{max-width:none!important}
+[data-experience=lebanon] #hero .hero-note{color:#FAF7F1!important}
+/* Preserve the complete concept composition rather than cropping product arrangements. */
+[data-experience] .hero-still-life img{aspect-ratio:3/2}
+[data-theme=dark] [data-experience=lebanon]{--sky-ink:#FAF7F1}
+[data-experience=lebanon] #context p,[data-experience=lebanon] #context a{color:inherit}
+html:has(body[data-experience]){scroll-padding-top:0}
+[data-experience] #countries,[data-experience] #how,[data-experience] #problem,[data-experience] #interest,[data-experience] #inside,[data-experience] #waitlist{scroll-margin-top:112px}
+@media(max-width:767px){[data-experience] #countries,[data-experience] #how,[data-experience] #problem,[data-experience] #interest,[data-experience] #inside,[data-experience] #waitlist{scroll-margin-top:90px}}
+[data-experience] .footer-top{display:grid}
+[data-experience] .country-photo-frame{grid-column:1/-1;grid-row:1;margin:0 0 14px}
+[data-experience] .country-photo-frame .country-photo{margin-bottom:0}
+[data-experience] .country-photo-frame figcaption{font-size:16px;line-height:1.5;margin-top:10px}

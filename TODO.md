@@ -38,3 +38,9 @@
 - For Lebanon and other sensitive regions, confirm comfort with being publicly named and consider displayMode:limited. Browser data files are public: omit any information that is not approved for publication even when the UI hides it.
 - Set visible:false and redeploy to remove an advisor immediately. Re-run node scripts/update-sitemap.cjs after changing advisor data and before deployment. The static sitemap cannot evaluate browser-side JavaScript.
 - Set ADVISORS_SETTINGS.enabled:true only after at least one approved advisor has complete consent and biography fields.
+
+## Editorial redesign follow-up
+
+- Replace generated concept scenes in assets/editorial with approved, licensed product photography once actual products and participating makers are confirmed. Preserve disclosure until imagery reflects real inventory; see assets/editorial/README.md.
+- Supply the original 21st.dev carousel source before implementing the future LebanonProductShowcase mount. Keep the current native static content usable until integration is complete.
+- Set absolute social-preview URLs after confirming the public domain; verify hosted Netlify form delivery and real contact details before launch.

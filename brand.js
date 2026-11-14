@@ -3,12 +3,15 @@
  const logoURL='/assets/brand/hand-to-hand.webp';
  const reduce=matchMedia('(prefers-reduced-motion: reduce)');
  const countryCard=document.querySelector('.country-card[data-country="lebanon"]');
- if(countryCard){const symbol=document.createElement('img');symbol.className='country-brand-symbol';symbol.src='/assets/brand/hand-to-hand-symbol.webp';symbol.alt='';symbol.setAttribute('aria-hidden','true');symbol.width=576;symbol.height=576;symbol.loading='lazy';symbol.onerror=()=>symbol.remove();countryCard.append(symbol);}
+ if(countryCard&&!document.body.dataset.experience){const symbol=document.createElement('img');symbol.className='country-brand-symbol';symbol.src='/assets/brand/hand-to-hand-symbol.webp';symbol.alt='';symbol.setAttribute('aria-hidden','true');symbol.width=576;symbol.height=576;symbol.loading='lazy';symbol.onerror=()=>symbol.remove();countryCard.append(symbol);}
 
  const normalise=path=>path.replace(/\/index\.html$/,'/').replace(/\/$/,'');
  let logoAvailable=false,busy=false,navigating=false,overlay=null,trigger=null,navigateTimer=null,safetyTimer=null,statusTimer=null;
  const previousInert=new Map();
- const probe=new Image();probe.onload=()=>{logoAvailable=true;document.documentElement.style.setProperty('--official-logo-ratio',probe.naturalWidth+'/'+probe.naturalHeight);};probe.onerror=()=>{logoAvailable=false;};probe.src=logoURL;
+ const probe=new Image();probe.onload=()=>{logoAvailable=true;document.documentElement.style.setProperty('--official-logo-ratio',probe.naturalWidth+'/'+probe.naturalHeight);};probe.onerror=()=>{logoAvailable=false;};probe.src='/assets/brand/hand-to-hand-display-320.webp';
+ let warmed=false;function warmLogo(){if(warmed)return;warmed=true;const full=new Image();full.src=logoURL;}
+ document.addEventListener('pointerover',event=>{if(event.target.closest('a[href*="/lebanon"]'))warmLogo();},{passive:true});
+ document.addEventListener('focusin',event=>{if(event.target.closest('a[href*="/lebanon"]'))warmLogo();});
  function finish(restoreFocus=true){clearTimeout(navigateTimer);clearTimeout(safetyTimer);clearTimeout(statusTimer);overlay?.remove();overlay=null;previousInert.forEach((was,element)=>{element.inert=was;});previousInert.clear();busy=false;navigating=false;document.body.classList.remove('brand-is-transitioning');if(restoreFocus&&trigger?.isConnected)trigger.focus({preventScroll:true});}
  function ordinaryFailure(url){finish();const notice=document.createElement('p');notice.className='brand-navigation-notice';notice.setAttribute('role','status');notice.textContent='The collection couldn’t open. ';const link=document.createElement('a');link.href=url;link.dataset.brandTransition='skip';link.textContent='Open Lebanon';notice.append(link);document.querySelector('main')?.prepend(notice);}
  function enter(url){if(busy)return;busy=true;document.querySelector('.brand-navigation-notice')?.remove();
@@ -17,8 +20,8 @@
   fetch(url.href,{credentials:'same-origin',cache:'force-cache'}).catch(()=>{});
   overlay=document.createElement('div');overlay.className='brand-transition';overlay.setAttribute('role','dialog');overlay.setAttribute('aria-modal','true');overlay.setAttribute('aria-label','Entering the Lebanon collection');overlay.tabIndex=-1;
   const composition=document.createElement('div');composition.className='brand-composition';const stage=document.createElement('div');stage.className='brand-logo-stage';
-  // Every stage uses the same original bitmap. No logo paths or hand shapes are reconstructed.
-  for(const part of ['symbol','wordmark','tagline','final']){const image=document.createElement('img');image.src=logoURL;image.alt=part==='final'?'Hand to Hand — From their hands to yours':'';image.width=1774;image.height=887;image.className='brand-layer brand-layer-'+part;if(part!=='final')image.setAttribute('aria-hidden','true');image.onerror=()=>go();stage.append(image);}
+  // Symbol layers isolate original bitmap pixels; the final composition is the untouched official artwork.
+  for(const part of ['heart','upper-hand','lower-hand','wordmark','tagline','final']){const image=document.createElement('img');image.src=['heart','upper-hand','lower-hand'].includes(part)?'/assets/brand/transition-'+part+'.webp':logoURL;image.alt=part==='final'?'Hand to Hand — From their hands to yours':'';image.width=1774;image.height=887;image.className='brand-layer brand-layer-'+part;if(part!=='final')image.setAttribute('aria-hidden','true');image.onerror=()=>go();stage.append(image);}
   const status=document.createElement('p');status.className='brand-transition-status';status.setAttribute('role','status');status.textContent='Discovering Lebanon...';
   const controls=document.createElement('div');controls.className='brand-transition-controls';const skip=document.createElement('a');skip.href=url.href;skip.dataset.brandTransition='skip';skip.textContent='Skip animation';skip.addEventListener('click',event=>{event.preventDefault();go();});const cancel=document.createElement('button');cancel.type='button';cancel.textContent='Cancel';cancel.addEventListener('click',()=>finish());controls.append(skip,cancel);composition.append(stage,status,controls);overlay.append(composition);
   function go(){if(!busy||navigating)return;navigating=true;clearTimeout(navigateTimer);clearTimeout(safetyTimer);clearTimeout(statusTimer);try{sessionStorage.setItem('handtohand:enter-lebanon',JSON.stringify({at:Date.now(),path:url.pathname}));}catch{}previousInert.forEach((was,element)=>{element.inert=was;});previousInert.clear();try{location.assign(url.href);safetyTimer=setTimeout(()=>{finish(false);},900);}catch{ordinaryFailure(url.href);}}

@@ -60,3 +60,7 @@ The uploaded PNG is retained unchanged. assets/brand/ contains its pixel-identic
 brand.js intercepts only same-origin links into the Lebanon collection from other pages. It prefetches the destination and stages the original raster artwork over approximately 1.8 seconds, then uses native navigation. Cancel/Escape, skip, reduced motion, missing-art fallback and browser history are supported. brand-arrival.js provides a short matching destination curtain without changing MODE or the data-driven content gates.
 
 Country and residence options are included in HTML for native no-JavaScript forms, then refreshed from the shared data by JavaScript. Native validation is used without JavaScript; the existing inline validation remains active when JavaScript runs. Checkout without JavaScript provides a safe collection link rather than accepting an order.
+
+## Editorial homepage and Lebanon experience
+
+See [REDESIGN.md](REDESIGN.md) for the shared theme primitives, static showcase boundary, image disclosures, preserved integrations and launch follow-up. The two redesigned routes load experience-foundation.css and experience.css; existing auxiliary pages continue to use styles.css.
