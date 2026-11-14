@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /checkout.html
+# TODO: add the absolute sitemap URL after the real domain is confirmed.
