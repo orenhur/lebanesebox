@@ -44,3 +44,13 @@
 #mission .mission-story-images figcaption p{font-size:17px;line-height:1.65;margin:0 0 16px}
 #mission .mission-disclosure{display:block;font-size:16px;line-height:1.5}
 #mission .mission-story-images img{animation:none!important;transform:none!important}
+
+/* Customer connection refines the existing homepage benefit band. */
+[data-experience=brand] #connection{background:var(--experience-soft);color:var(--ink);padding-block:64px}
+#connection .connection-intro{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:start;margin-bottom:36px}
+[data-experience=brand] #connection h2{font-size:clamp(30px,3vw,44px)!important;line-height:1.15!important;margin:0}
+#connection .connection-intro>p{margin:0;max-width:54ch}
+#connection .connection-benefits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;border-top:1px solid var(--border);padding-top:28px}
+[data-experience=brand] #connection h3{font:600 20px/1.4 'DM Sans',sans-serif!important;margin:0 0 10px}
+#connection .connection-benefits p{margin:0;max-width:34ch}
+@media(max-width:767px){[data-experience=brand] #connection{padding-block:48px}#connection .connection-intro{grid-template-columns:minmax(0,1fr);gap:20px;margin-bottom:28px}#connection .connection-benefits{grid-template-columns:minmax(0,1fr);gap:24px;padding-top:24px}#connection .connection-benefits p{max-width:none}}
